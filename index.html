@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <title>ToDo List</title>
+    <title>Todo List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body class="bg-slate-400 text-white flex justify-center items-center">
-<div class="main mt-[200px]">
-    <h1 class="font-bold text-4xl text-center mb-5">ToDo List</h1>
-    <form action="">
-<input type="text" id="input" placeholder="Enter Any Tak..." class="p-3 bg-slate-500 rounded-l-full">
-<button type="button" class="rounded-r-full bg-black text-white p-3" onclick="add()">Add</button>
-    </form>
-    <div class="list bg-slate-300 mt-5 p-5 rounded-xl">
-<table class="w-full">
-<thead class="bg-slate-900">
-    <th class="text-start p-3">DETAILS</th>
-    <th class="text-start p-3">ACTIONS</th>
-</thead>
-<tbody id="dynamicList">
-
-</tbody>
+<body class="bg-gray-800 text-white flex justify-center items-center ">
     
-</table>
-    </div>
-</div>
-    <script src="app.js"></script>
+   <div class="main mt-[200px]">
+<h1 class="text-4xl font-bold  text-center mb-5">Todo List</h1>
 
+<form action="">
+
+    <input type="text" id="input" placeholder="Enter Any Task....." class=" p-3 bg-slate-500 rounded-l-full">
+    <button type="button" class="bg-slate-950 rounded-r-full p-3" onclick="add()"> Add</button>
+</form>
+
+<div class="list bg-slate-400 mt-5 p-5 rounded-xl ">
+    <table class="w-full">
+        <input type="text"  id="search" placeholder="Search Any Todo...." oninput="filterTask()" class="p-3 mb-3 bg-slate-500">
+        <thead class="bg-slate-900 rounded w-full">
+            <th>#</th>
+        <th class="text-start p-3 ">Details</th>
+        <th class="text-start p-3 ">Actions</th>        
+        </thead>
+        <tbody id="list">
+           
+        </tbody>
+    </table>
+</div>
+
+   </div>
+
+<script src="app.js"></script>
 </body>
 </html>
